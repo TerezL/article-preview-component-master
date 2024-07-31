@@ -1,0 +1,142 @@
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: "Manrope", sans-serif;
+    color: hsl(214, 17%, 51%);
+    font-size: 13px;
+}
+
+.container {
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.drawers {
+    max-width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.content_text{
+    margin: 0 auto;
+    width: 80%;
+    padding: 1rem;
+}
+
+.content_text h1 {
+    font-size: 17px;
+}
+
+.row {
+    display: flex;
+    margin-top: 1rem;
+}
+.avatar {
+    width: 30%;
+}
+.avatar-img {
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.name {
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    padding: 0 0.5rem;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+.name h2, p {
+    margin: 0;
+}
+
+.icon-share {
+    align-content: center;
+}
+.share {
+    background-color: hsl(210, 46%, 95%);
+    padding: 1rem;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+}
+
+.share_content {
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    padding: 2.5rem 2rem 2.5rem 0;
+    justify-content: start;
+    width: 81%;
+    visibility: hidden;
+    position: absolute;
+    bottom: 4%;
+    left: 7%;
+    border-radius: 0 0 0.5rem 0.5rem;
+    z-index: 1;
+}
+.share_content.active {
+    visibility: visible;
+}
+
+.share_content p {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.share_item {
+    margin: 0 1.5rem;
+}
+
+@media only screen and (min-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+    }
+    .web-content {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .drawers {
+        max-width: 100%;
+        border-radius: 0.5rem 0 0 0.5rem;
+        object-fit: cover;
+    }
+    
+    .content_text {
+        padding: 0 1rem;
+        width: auto;
+    }
+    .share_content {
+        width: 12%;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 5px solid transparent transparent transparent;
+        left: 65%;
+        bottom: 78%;
+    }
+    .share_item {
+        margin: 0 0.4rem;
+    }
+    .arrow-down {
+        position: relative;
+        top: 28px;
+        right: 100px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 20px 0 20px;
+        border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+      }
+      .share {
+        cursor: pointer;
+      }
+      
+}
